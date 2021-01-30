@@ -1,0 +1,44 @@
+@media only screen and (min-width: 600px) {
+    .contentDisplay {
+        margin: 30% 15%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contentDisplay {
+        margin: 30% 0%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .contentDisplay {
+        margin: 20% 20%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .contentDisplay {
+        margin: 10% 24%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .contentDisplay {
+        margin: 5% 30%;
+    }
+}
+
+canvas {
+    background-color: #464646;
+    position: fixed !important;
+    ;
+}
+
+.label {
+    display: flex;
+    font-size: 1.5em;
+}
+
+.error {
+    color: red;
+}

@@ -1,0 +1,7 @@
+{
+    "name": "smile-hero",
+    "integrations": {
+        "capacitor": {}
+    },
+    "type": "react"
+}

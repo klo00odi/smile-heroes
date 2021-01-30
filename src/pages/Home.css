@@ -1,0 +1,47 @@
+@media only screen and (min-width: 600px) {
+    ion-icon {
+        font-size: 25px !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    ion-icon {
+        font-size: 25px !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    ion-tab-bar {
+        height: 70px !important;
+    }
+    ion-icon {
+        font-size: 28px !important;
+    }
+    ion-label {
+        font-size: 16px !important;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    ion-tab-bar {
+        height: 90px !important;
+    }
+    ion-icon {
+        font-size: 32px !important;
+    }
+    ion-label {
+        font-size: 18px !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    ion-tab-bar {
+        height: 100px !important;
+    }
+    ion-icon {
+        font-size: 35px !important;
+    }
+    ion-label {
+        font-size: 20px !important;
+    }
+}
