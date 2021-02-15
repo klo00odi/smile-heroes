@@ -24,7 +24,7 @@ class Result extends Component {
             'Authorization': localStorage.getItem("token")
         }
 
-        axios.post("https://smile-heroes-api-v1.oa.r.appspot.com/secure/user/result",
+        axios.post("https://api-dot-smile-heroes-21-api-v1.uc.r.appspot.com/secure/user/result",
             {
                 email: localStorage.getItem("email"),
             }, {

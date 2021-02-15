@@ -55,7 +55,7 @@ class Login extends Component {
 
         this.setState({ isSubmit: true, invalidLogin: false })
 
-        axios.post("https://smile-heroes-api-v1.oa.r.appspot.com/user/login",
+        axios.post("https://api-dot-smile-heroes-21-api-v1.uc.r.appspot.com/user/login",
             {
                 email: this.state.email,
                 password: this.state.password
@@ -67,7 +67,7 @@ class Login extends Component {
                     'Authorization': localStorage.getItem("token")
                 }
 
-                axios.post("https://smile-heroes-api-v1.oa.r.appspot.com/secure/user/me",
+                axios.post("https://api-dot-smile-heroes-21-api-v1.uc.r.appspot.com/secure/user/me",
                     {
                         email: this.state.email,
                     }, {

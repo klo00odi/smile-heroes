@@ -11,12 +11,14 @@ import {
   IonPage
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { personSharp, personAddSharp , homeSharp , clipboardSharp , ribbonSharp , logInSharp , logOutSharp} from 'ionicons/icons';
+import { personSharp, personAddSharp, homeSharp, clipboardSharp, ribbonSharp, logInSharp, logOutSharp } from 'ionicons/icons';
 import Login from './Login/Login'
 import Register from './Register/Register'
 import Main from './Main/Main'
 import Profile from './profile/Profile'
 import './Home.css'
+import axios from 'axios';
+
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -45,14 +47,25 @@ class App extends Component {
     super(props)
 
     this.state = {
-      isLoggin : localStorage.getItem("token") !== null    }
+      isLoggin: localStorage.getItem("token") !== null
+    }
+
+    if (localStorage.getItem("token")) {
+      axios.get("https://api-dot-smile-heroes-21-api-v1.uc.r.appspot.com/secure/user/today", {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': localStorage.getItem("token")
+        }
+      }).then(res => this.setState({ today: res.data })).catch(err => this.logout())
+    }
+
   }
 
   isLogin = () => {
     this.setState({ isLoggin: true })
   }
 
-  logout = ()=>{
+  logout = () => {
     localStorage.removeItem("token")
     window.location.reload();
   }
@@ -97,7 +110,7 @@ class App extends Component {
                   <Route path="/home" component={Main} exact={true} />
                   <Route path="/profile" component={Profile} exact={true} />
                   <Route path="/result" component={Result} exact={true} />
-                  <Route path="/logout" render={() =>{ this.logout(); return <Redirect to="/" />} } />
+                  <Route path="/logout" render={() => { this.logout(); return <Redirect to="/" /> }} />
                   <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
                   <Route render={() => <Redirect to="/home" />} exact={true} />
                 </IonRouterOutlet>

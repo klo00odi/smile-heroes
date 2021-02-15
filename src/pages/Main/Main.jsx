@@ -57,11 +57,11 @@ class Main extends Component {
             'Authorization': localStorage.getItem("token")
         }
 
-        axios.get("https://smile-heroes-api-v1.oa.r.appspot.com/secure/user/today", {
+        axios.get("https://api-dot-smile-heroes-21-api-v1.uc.r.appspot.com/secure/user/today", {
             headers: headers
         }).then(res => this.setState({ today: res.data }))
 
-        axios.post("https://smile-heroes-api-v1.oa.r.appspot.com/secure/user/result",
+        axios.post("https://api-dot-smile-heroes-21-api-v1.uc.r.appspot.com/secure/user/result",
             {
                 email: this.state.user.email,
             }, {
@@ -79,7 +79,7 @@ class Main extends Component {
             'Authorization': localStorage.getItem("token")
         }
 
-        axios.post("https://smile-heroes-api-v1.oa.r.appspot.com/secure/user/isBrush",
+        axios.post("https://api-dot-smile-heroes-21-api-v1.uc.r.appspot.com/secure/user/isBrush",
             {
                 email: this.state.user.email,
             }, {
@@ -97,7 +97,7 @@ class Main extends Component {
             'Authorization': localStorage.getItem("token")
         }
 
-        axios.post("https://smile-heroes-api-v1.oa.r.appspot.com/secure/user/brush",
+        axios.post("https://api-dot-smile-heroes-21-api-v1.uc.r.appspot.com/secure/user/brush",
             {
                 email: this.state.user.email,
             }, {

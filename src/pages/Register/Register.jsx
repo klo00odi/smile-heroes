@@ -102,7 +102,7 @@ class Register extends Component {
             gender : register.gender
 
         }
-        axios.post("https://smile-heroes-api-v1.oa.r.appspot.com/user/register", request)
+        axios.post("https://api-dot-smile-heroes-21-api-v1.uc.r.appspot.com/user/register", request)
             .then(res => {
                 this.setState({ isSuccessRegister: true, registerErrorMesage: null, isSumbit: false })
             }).catch(error =>
